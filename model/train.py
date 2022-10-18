@@ -16,4 +16,5 @@ clf = IsolationForest(n_estimators=50, max_samples=500, random_state=rng, contam
 clf.fit(X_train)
 
 dump(clf, './isolation_forest.joblib')
+print("train complete")
 
