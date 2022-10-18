@@ -59,9 +59,8 @@ def detect():
 
 
 # One consumer per partition
+for _ in range(NUM_PARTITIONS):
+    p = Process(target=detect)
+    p.start()
 if __name__ == "__main__":
-    for _ in range(NUM_PARTITIONS):
-        p = Process(target=detect)
-        p.start()
-
- 
+    detect() 
