@@ -33,5 +33,7 @@ if producer is not None:
         producer.produce(topic=TRANSACTIONS_TOPIC,
                          value=record)
         producer.flush()
+        print("produce message")
+        print(record)
         _id += 1
         time.sleep(DELAY)

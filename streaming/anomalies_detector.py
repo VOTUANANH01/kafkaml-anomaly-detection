@@ -7,10 +7,13 @@ from multiprocessing import Process
 
 import numpy as np
 
-from streaming.utils import create_producer, create_consumer
+import sys
+sys.path.append(r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10\kafkaml-anomaly-detection' )
 from settings import TRANSACTIONS_TOPIC, TRANSACTIONS_CONSUMER_GROUP, ANOMALIES_TOPIC, NUM_PARTITIONS
 
-model_path = os.path.abspath('../model/isolation_forest.joblib')
+from streaming.utils import create_producer, create_consumer
+
+model_path = r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10\kafkaml-anomaly-detection\model\isolation_forest.joblib'
 
 
 def detect():
@@ -56,6 +59,9 @@ def detect():
 
 
 # One consumer per partition
-for _ in range(NUM_PARTITIONS):
-    p = Process(target=detect)
-    p.start()
+if __name__ == "__main__":
+    for _ in range(NUM_PARTITIONS):
+        p = Process(target=detect)
+        p.start()
+
+ 
