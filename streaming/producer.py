@@ -6,7 +6,7 @@ from datetime import datetime
 import numpy as np
 
 import sys
-sys.path.append(r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10\kafkaml-anomaly-detection' )
+sys.path.append(r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10 real-time anomaly detection\kafkaml-anomaly-detection' )
 from settings import TRANSACTIONS_TOPIC, DELAY, OUTLIERS_GENERATION_PROBABILITY
 
 from streaming.utils import create_producer

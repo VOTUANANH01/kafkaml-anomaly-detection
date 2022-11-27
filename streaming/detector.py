@@ -8,12 +8,12 @@ from multiprocessing import Process
 import numpy as np
 
 import sys
-sys.path.append(r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10\kafkaml-anomaly-detection' )
+sys.path.append(r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10 real-time anomaly detection\kafkaml-anomaly-detection' )
 from settings import TRANSACTIONS_TOPIC, TRANSACTIONS_CONSUMER_GROUP, ANOMALIES_TOPIC, NUM_PARTITIONS
 
 from streaming.utils import create_producer, create_consumer
 
-model_path = r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10\kafkaml-anomaly-detection\model\isolation_forest.joblib'
+model_path = r'F:\tai_lieu\Nam_4\semester 7th\Parallel and distributed computing\assignment\slide 5-6\Tutorial 10 real-time anomaly detection\kafkaml-anomaly-detection\model\isolation_forest.joblib'
 
 
 def detect():

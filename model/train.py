@@ -18,3 +18,5 @@ clf.fit(X_train)
 dump(clf, './isolation_forest.joblib')
 print("train complete")
 
+print(clf)
+
